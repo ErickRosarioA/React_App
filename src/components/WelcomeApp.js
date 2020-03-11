@@ -5,7 +5,7 @@ function Welcome(props){
         <div className="container">
             <div className="Fitness-User-Info">
                 <h1>{props.username}</h1>
-                <p>Este es un mensaje par ael user app</p>
+                <p>Este es un mensaje para el user app</p>
             </div>        
         </div>
     )

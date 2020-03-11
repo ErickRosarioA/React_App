@@ -5,13 +5,9 @@ function Exercies(props){
     return(
         <div>
         {
-           props.exercies.map((exercie)=>{
+           props.exercies.map((exercie,i)=>{
                 return(
-                    <div style={{
-
-                        margin:'10px'
-
-                    }}>
+                    <div style={{ margin:'10px' }} key={i}>
                         <Card
                         title={exercie.title}
                         description={exercie.description}

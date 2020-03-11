@@ -14,11 +14,11 @@ setTimeout(() => {
     this.setState({
         img:this.props.img
     });
-}, 3000);
+}, 2000);
 }
 
     render(){
-        const {title,img,description,leftColor,rightColor}=this.props;
+        const {title,description,leftColor,rightColor}=this.props;
         return (
             <div className="card mx-auto Fitness-Card" 
             style={{

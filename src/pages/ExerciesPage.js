@@ -1,7 +1,7 @@
-import React from 'react'
-import Welcome from '../components/WelcomeApp'
+import React from 'react';
+import Welcome from '../components/WelcomeApp';
 import ExerciesC from '../components/Exercies';
-import AddExercies from '../components/AddExerciesC'
+import AddExercies from '../components/AddExerciesC';
 class Exercies extends React.Component{
 constructor(props){
     super(props);
@@ -29,9 +29,7 @@ constructor(props){
             "rightColor": "#F76B1C"
         }]
     }
-
 }
-
         render(){
             return(
                 <div>
@@ -39,7 +37,6 @@ constructor(props){
                     username="Erick"
                     />
                     <ExerciesC exercies={this.state.data}/>
-
                     <AddExercies/>
                  </div>
             )
