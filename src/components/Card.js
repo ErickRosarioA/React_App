@@ -38,6 +38,6 @@ setTimeout(() => {
             </div>
         );
     }
-}
+};
 
 export default Card;

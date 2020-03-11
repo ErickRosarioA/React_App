@@ -1,26 +1,25 @@
 import React from 'react'
 import Card from '../components/Card';
+//tambien puedo psar las propiedades como obejto directa (destruturing para las props)
+const Exercies=({exercies})=>(
+    <div>
+    {
+        exercies.map((exercie,i)=>{
+            return(
+                <div style={{ margin:'10px' }}  key={i}>
+                    <Card
+                    key={exercie.id}
+                    title={exercie.title}
+                    description={exercie.description}
+                    img={exercie.img}
+                    leftColor={exercie.leftColor}
+                    rightColor={exercie.rightColor}
+                    />
+                </div>
+            )
+        })
+    }
+    </div>
+);
 
-function Exercies(props){
-    return(
-        <div>
-        {
-           props.exercies.map((exercie,i)=>{
-                return(
-                    <div style={{ margin:'10px' }} key={i}>
-                        <Card
-                        title={exercie.title}
-                        description={exercie.description}
-                        img={exercie.img}
-                        leftColor={exercie.leftColor}
-                        rightColor={exercie.rightColor}
-                        />
-                    </div>
-                )
-            })
-        }
-        </div>
-    )
-}
-
-export default Exercies
+export default Exercies;

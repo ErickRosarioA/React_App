@@ -3,9 +3,8 @@ import Welcome from '../components/WelcomeApp';
 import ExerciesC from '../components/Exercies';
 import AddExercies from '../components/AddExerciesC';
 class Exercies extends React.Component{
-constructor(props){
-    super(props);
-    this.state={
+    //Neuva manera sin cosntrutor ni super para las props, solo state...s
+    state={
         data:[{
             "id": 1,
             "title": "Technique Guides",
@@ -28,19 +27,18 @@ constructor(props){
             "leftColor": "#FAD961",
             "rightColor": "#F76B1C"
         }]
+    };
+    render(){
+        return(
+            <div>
+                <Welcome
+                username="Erick"
+                />
+                <ExerciesC exercies={this.state.data}/>
+                <AddExercies/>
+            </div>
+        )
     }
-}
-        render(){
-            return(
-                <div>
-                    <Welcome
-                    username="Erick"
-                    />
-                    <ExerciesC exercies={this.state.data}/>
-                    <AddExercies/>
-                 </div>
-            )
-        }
 }
 
 export default Exercies;

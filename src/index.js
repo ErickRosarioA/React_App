@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import Exercies from './pages/ExerciesPage'
+import App from './components/App';
+
+
 
 const container= document.getElementById('root');
 
-ReactDom.render(<Exercies/>,container);
+ReactDom.render(<App/>,container);
 
 
 
