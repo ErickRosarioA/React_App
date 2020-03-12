@@ -7,6 +7,7 @@ class ExerciesNew extends React.Component{
         form:{
             title:'',
             description:'',
+            img:'',
             leftColor:'',
             rightColor:''
         }
@@ -31,7 +32,10 @@ class ExerciesNew extends React.Component{
                         <Card {...this.state.form}/>
                     </div>
                     <div className="col-sm">
-                        <ExerciesForm onChange={this.handleChange} form ={this.state.form}/>
+                        <ExerciesForm 
+                        onChange={this.handleChange} 
+                        form ={this.state.form}
+                        />
                     </div>
             </div>
         

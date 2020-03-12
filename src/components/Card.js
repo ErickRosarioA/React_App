@@ -18,7 +18,7 @@ setTimeout(() => {
 }
 
     render(){
-        const {title,description,leftColor,rightColor}=this.props;
+        const {title,img,description,leftColor,rightColor}=this.props;
         return (
             <div className="card mx-auto Fitness-Card" 
             style={{
@@ -27,7 +27,7 @@ setTimeout(() => {
                 <div className="card-body">
                     <div className="row center ">
                         <div className="col-6">
-                            <img src={this.state.img} width="100px" height="100px" className="float-right"/>
+                            <img src={img} width="100px" height="100px" className="float-right"/>
                         </div>
                         <div className="col-6 Fitness-Card-Info">
                             <h2>{title}</h2>
