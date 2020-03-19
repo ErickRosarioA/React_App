@@ -1,5 +1,6 @@
 import React from 'react';
-
+import '../components/style/Form.css';
+import {Link} from  'react-router-dom';
 class ExerciesForm extends React.Component{
 //para manejar los eventos con sus this.propos se puede hacer:
 //un contrutor y pasar por super() y llamar la fuction con this == this. fuction.bind(props)
@@ -16,6 +17,7 @@ class ExerciesForm extends React.Component{
     render(){
         const {onChange, form} = this.props;
         return(
+            
             <div className="container">
             <form 
                 onSubmit={this.handleSubmit}
@@ -24,7 +26,7 @@ class ExerciesForm extends React.Component{
                     <input 
                         type="text" 
                         className="form-control" 
-                        placeholder="title" 
+                        placeholder="Title" 
                         name="title"
                         onChange={onChange}
                         value={form.title}
@@ -34,7 +36,7 @@ class ExerciesForm extends React.Component{
                     <input 
                         type="text" 
                         className="form-control" 
-                        placeholder="description" 
+                        placeholder="Description" 
                         name="description"
                         onChange={onChange}
                         value={form.description}
@@ -44,7 +46,7 @@ class ExerciesForm extends React.Component{
                     <input 
                         type="text" 
                         className="form-control" 
-                        placeholder="img" 
+                        placeholder="Imagen" 
                         name="img"
                         onChange={onChange}
                         value={form.img}
@@ -55,7 +57,7 @@ class ExerciesForm extends React.Component{
                         <input 
                             type="text" 
                             className="form-control" 
-                            placeholder="leftColor" 
+                            placeholder="Left-Color" 
                             name="leftColor"
                             onChange={onChange}
                             value={form.leftColor}
@@ -65,20 +67,30 @@ class ExerciesForm extends React.Component{
                         <input 
                             type="text" 
                             className="form-control"
-                            placeholder="rightColor" 
+                            placeholder="Right-Color" 
                             name="rightColor"
                             onChange={onChange}
                             value={form.rightColor}
                         />    
                     </div>
                 </div>
-                
-                <button 
-                    type="submit" 
-                    className="btn btn-primary"
-                >
-                    Submit
-                </button>
+                <div  className="row">
+                    <div className="col-sm">
+                        <button 
+                        type="submit" 
+                        className="myButton">
+                        CREAR 
+                        </button>
+                    </div>
+                    <div className="col-sm">
+                        <Link to="/">
+                            <div
+                            className="myButtonCancel">
+                            CANCELAR
+                            </div>
+                        </Link>
+                    </div>
+                </div>
             </form>
         </div>
         );

@@ -1,5 +1,5 @@
 import React from 'react';
-import backImg from '../img/circle.jpg';
+import camaraOff from '../img/camaraOFF.png';
 import './style/Card.css';
 class Card extends React.Component{
 constructor(props){
@@ -22,12 +22,12 @@ setTimeout(() => {
         return (
             <div className="card mx-auto Fitness-Card" 
             style={{
-                backgroundImage:`linear-gradient(to right, ${leftColor}, ${rightColor})`
+                backgroundImage:`linear-gradient(to right, ${leftColor || '#F76161'}, ${rightColor || '#FFFFFF'})`
             }}>
                 <div className="card-body">
                     <div className="row center ">
                         <div className="col-6">
-                            <img src={img} width="100px" height="100px" className="float-right"/>
+                            <img src={img || camaraOff} width="100px" height="100px" className="float-right"/>
                         </div>
                         <div className="col-6 Fitness-Card-Info">
                             <h2>{title}</h2>

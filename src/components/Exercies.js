@@ -5,18 +5,21 @@ const Exercies=({exercies})=>(
     <div>
     {
         exercies.map((exercie,i)=>{
-            return(
-                <div style={{ margin:'10px' }}  key={i}>
-                    <Card
-                    key={exercie.id}
-                    title={exercie.title}
-                    description={exercie.description}
-                    img={exercie.img}
-                    leftColor={exercie.leftColor}
-                    rightColor={exercie.rightColor}
-                    />
-                </div>
-            )
+            if(i<3){
+                return(
+                    <div style={{ margin:'10px' }}  key={i} >
+                        <Card
+                        key={exercie.id}
+                        title={exercie.title}
+                        description={exercie.description}
+                        img={exercie.img}
+                        leftColor={exercie.leftColor}
+                        rightColor={exercie.rightColor}
+                        />
+                    </div>
+                )
+            }
+         
         })
     }
     </div>

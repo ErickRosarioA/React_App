@@ -24,14 +24,11 @@ class Exercies extends React.Component{
             this.setState({
                 data,
                 loading:false
-                
             });
         } catch (error) {
-
             this.setState({
               loading:false,
               error
-                
             });
         }
 
